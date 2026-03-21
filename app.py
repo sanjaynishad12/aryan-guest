@@ -648,7 +648,7 @@ def generate_accounts():
     logger.info(f"Starting creation of {count} accounts for region {region} with name prefix {name}")
     
     # Use thread pool with limited workers
-    max_workers = 5  # Reduced for stability
+    max_workers = 2  # Reduced for stability
     
     # Create accounts with retry mechanism
     results = []
@@ -676,7 +676,7 @@ def generate_accounts():
                     break
             
             if len(results) < count:
-                time.sleep(3)  # Increased delay for stability
+                time.sleep(2)  # Increased delay for stability
     
     # Return response
     response_data = {
