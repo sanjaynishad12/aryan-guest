@@ -633,8 +633,8 @@ def generate_accounts():
     # Validate and convert count
     try:
         count = int(count)
-        if count > 15:
-            count = 15
+        if count > 50:
+            count = 50
         if count < 1:
             count = 1
     except:
@@ -648,7 +648,7 @@ def generate_accounts():
     logger.info(f"Starting creation of {count} accounts for region {region} with name prefix {name}")
     
     # Use thread pool with limited workers
-    max_workers = 3  # Reduced for stability
+    max_workers = 5  # Reduced for stability
     
     # Create accounts with retry mechanism
     results = []
