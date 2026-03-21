@@ -699,7 +699,7 @@ def home():
         "available_regions": list(REGION_LANG.keys()),
         "note": "Complete account creation with ALL steps: register -> token -> major register -> major login -> getlogindata",
         "name_format": "Prefix (max 6) + random chars (4-8) = max 12 chars total",
-        "password_format": "GRAFIX-{RANDOM}-CORE" (letters and numbers only)"
+        "password_format": "GRAFIX-{RANDOM}-CORE" "(letters and numbers only)"
     })
 
 @app.route('/health')
